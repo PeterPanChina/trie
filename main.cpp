@@ -1,6 +1,10 @@
+// Copyright (C) 2019 Tencent Inc.
+// Author: Zujiang Pan (zujiangpan@tencent.com)
 #include <iostream>
-#include "Trie.h"
+#include "trie.h"
+
 using namespace std;
+
 int main() {
     Trie* obj = new Trie();
     obj->insert("abcd");
@@ -14,7 +18,7 @@ int main() {
     string query = "a";
     int frequency = 0;
     bool isApper = obj->search(query, frequency);
-    if (isApper == true) {
+    if (isApper) {
         cout << frequency << endl;
     }
     else {

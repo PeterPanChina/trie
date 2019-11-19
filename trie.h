@@ -1,15 +1,18 @@
-//
-// Created by pzj on 2019/11/15.
-//
+// Copyright (C) 2019 Tencent Inc.
+// Author: Zujiang Pan (zujiangpan@tencent.com)
 
-#ifndef TRIE_TRIE_H
-#define TRIE_TRIE_H
+#ifndef APP_QZAP_SERVICE_TARGETING_CODELAB_ZUJIANGPAN_TRIECPP_TRIE_H_
+#define APP_QZAP_SERVICE_TARGETING_CODELAB_ZUJIANGPAN_TRIECPP_TRIE_H_
 
-#include <vector>
 #include <string>
-#include "TrieNode.h"
+#include "trienode.h"
+
 using namespace std;
 class Trie {
+    /*
+     * Trie树定义
+     * 根节点为root
+     */
 private:
     TrieNode* root;
 public:
@@ -18,10 +21,8 @@ public:
     }
     void insert(string word);
     bool search(string word, int& frequency);
-    bool startsWith(string prefix);
     void dictionarySortPrint();
     void dictionarySortPrintDFS(TrieNode* pTrieNode, string str);
 };
 
-
-#endif //TRIE_TRIE_H
+#endif //APP_QZAP_SERVICE_TARGETING_CODELAB_ZUJIANGPAN_TRIECPP_TRIE_H_
